@@ -14,7 +14,6 @@ func main() {
 	e := echo.New()
 	e.GET("/:namefile", pageHandler)
 	e.Logger.Fatal(e.Start("127.0.0.1:3001"))
-
 }
 
 func pageHandler(c echo.Context) error {
