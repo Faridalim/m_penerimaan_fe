@@ -27,10 +27,10 @@ func pageHandler(c echo.Context) error {
 		cookie.Expires = time.Now().Add(5 * time.Second)
 		c.SetCookie(cookie)
 		c.Response().Header().Set("Cache-Control", "max-age:2000, public")
-		return c.File("pages/k2/index.html")
+		return c.File("pages/public/index.html")
 	} else {
 		c.Response().Header().Set("Cache-Control", "max-age:2000, public")
-		return c.File("pages/k2/" + namefile)
+		return c.File("pages/public/" + namefile)
 	}
 }
 
