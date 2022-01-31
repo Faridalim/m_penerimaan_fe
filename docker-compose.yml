@@ -1,0 +1,7 @@
+services:
+  fe-penerimaan:
+    build: .
+    container_name: fe-penerimaan
+    restart: always
+    ports:
+      - "3002:3002"
